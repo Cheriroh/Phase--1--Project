@@ -1,0 +1,254 @@
+[21:03, 24/12/2024] Cheru💎✨ Nehemiah: // Search button element
+const searchBtn = document.getElementById('search-btn');
+
+// Get the meal list element
+const mealList = document.getElementById('meal');
+
+// Get the meal details content element
+const mealDetailsContent = document.querySelector('.meal-details-content');
+
+// Get the recipe close button element
+const recipeCloseBtn = document.getElementById('recipe-close-btn');
+
+// Event listener for the search button
+searchBtn.addEventListener('click', getMealList);
+
+// Event listener for the meal list
+mealList.addEventListener('click', getMealRecipe);
+
+// Event listener for the recipe close button
+recipeCloseBtn.addEventListener('click', () => {
+    mealDetailsContent.parentElement.classList.remove('showRecipe');
+  });
+
+  // Function to get the meal …
+[21:34, 24/12/2024] Cheri: ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+prudence@prudence-HP-EliteBook-840-G3:~/Phase--1--Project$
+[21:37, 24/12/2024] Cheru💎✨ Nehemiah: ping github.com
+[22:01, 24/12/2024] Cheru💎✨ Nehemiah: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="Logo">
+                <img src="https://cdn.pixabay.com/photo/2020/10/20/02/55/woman-5669334_640.png" alt="Logo">
+            </div>
+            <p id="tasty">Tasty<span>Tracks</span></p>
+            <ul>
+                <li>Home</a> </li>
+                <li>Featured Recipes</a></li>
+                <li>Compose Recipe</a></li> 
+                <li>Contact</a></li>
+              </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="https://cms-b-assets.familysearch.org/dims4/default/4069e21/2147483647/strip/true/crop/800x500+0+0/resize/800x500!/format/webp/quality/90/?url=https%3A%2F%2Ffamilysearch-brightspot.s3.amazonaws.com%2F2d%2F7a%2Ff452bba9d5c8581030392bd4e252%2Fenglish-breakfast.jpg" alt="">
+            <div class="heros"><h1>TASTY TRACKS</h1>
+              <p>Discover, Create, and Share Delicious Recipes</p><br><br><br><br><br><br>
+            </div>
+          </section>
+          <section id="featured-recipes">
+            <h2>Featured Recipes</h2>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg" alt="Recipe 1">
+              <h3>Big Mac</h3>
+            </div>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/qtuwxu1468233098.jpg" alt="Recipe 2">
+              <h3>Chicken Enchilada Casserole</h3>
+            </div>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/uttrxw1511637813.jpg" alt="Recipe 2">
+              <h3>Lancashire Hotpot</h3>
+            </div>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg" alt="Recipe 3">
+              <h3>Fluffy Pancakes</h3>
+            </div>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/1520084413.jpg" alt="Recipe 4">
+              <h3>Escovitch Fish</h3>
+            </div>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/1550440197.jpg" alt="Recipe 5">
+              <h3>Salmon Eggs Eggs Benedict</h3>
+            </div>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg" alt="Recipe 6">
+              <h3>Bread and Butter Pudding</h3>
+            </div>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/uyqrrv1511553350.jpg" alt="Recipe 2">
+              <h3>Beef Dumpling Stew</h3>
+            </div>
+            <div class="recipe-card">
+              <img src="https://www.themealdb.com/images/media/meals/va668f1683209318.jpg">
+              <h3>Tortang Talong</h3>
+            </div>
+          </section>
+        </main>
+
+        <section id="composepg">
+          <h2>COMPOSE RECIPE</h2>
+          <form id="recipe-form">
+            <div class="form-group">
+              <label for="title">Recipe Title</label>
+              <input class="input2" type="text" id="title" placeholder="Enter recipe title" required>
+            </div>
+            <div class="form-group">
+              <label for="ingredients">Ingredients</label>
+              <textarea id="ingredients" placeholder="Enter recipe ingredients" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="instructions">Instructions</label>
+              <textarea id="instructions" placeholder="Enter recipe instructions" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit">Save</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="added-recipes">
+          <h2>MANAGE RECIPES</h2>
+          <div id="added-recipes-container">
+            <section id="recipes-container"></section>
+      
+          </div>
+        </section>
+
+        <section id="contact-form">
+  <h2>GET IN TOUCH</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input class="input2" type="text" id="name" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input class="input2" type="email" id="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Enter your message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <div class="footercont">
+    <div class="social-media">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <ul>
+      <li><a href="#">Follow us for culinary adventures and delicious inspirations.</a></li>
+      <p>&copy; 2023 Tasty Tracks. All rights reserved.</p>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const recipeForm = document.getElementById('recipe-form');
+  const recipesContainer = document.getElementById('recipes-container')
+
+  recipeForm.addEventListener('submit', event => {
+    event.preventDefault();
+    // Get the values from the form inputs
+    const title = document.getElementById('title').value;
+    const ingredients = document.getElementById('ingredients').value;
+    const instructions = document.getElementById('instructions').value;
+
+    // Create a new recipe object
+    const newRecipe = {
+      title: title,
+      ingredients: ingredients,
+      instructions: instructions
+    };
+
+    // Send the new recipe data to the server
+    fetch('http://localhost:3000/recipes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newRecipe)
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Recipe added successfully!');
+          recipeForm.reset(); 
+          fetchRecipes(); 
+        } else {
+          throw new Error('Failed to add recipe');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+  })
+
+
+  // Fetch recipes on page load
+  fetchRecipes();
+
+  function fetchRecipes() {
+    fetch('http://localhost:3000/recipes')
+      .then(response => response.json())
+      .then(recipes => {
+        displayRecipes(recipes);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
+  function displayRecipes(recipes) {
+    recipesContainer.innerHTML = '';
+
+    recipes.forEach(recipe => {
+      const recipeCard = document.createElement('div');
+      recipeCard.className = 'recipe-card1';
+
+      const titleElement = document.createElement('h3');
+      titleElement.textContent = recipe.title;
+
+      const ingredientsElement = document.createElement('p');
+      ingredientsElement.textContent = 'Ingredients: ' + recipe.ingredients;
+
+      const instructionsElement = document.createElement('p');
+      instructionsElement.textContent = 'Instructions: ' + recipe.instructions;
+
+      recipeCard.appendChild(titleElement);
+      recipeCard.appendChild(ingredientsElement);
+      recipeCard.appendChild(instructionsElement);
+
+      recipesContainer.appendChild(recipeCard);
+    });
+  }
+  });
+</script>
+      
+  
+  
+          
+    <script src="app.js"></script>
+</body>
+</html>
